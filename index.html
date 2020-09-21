@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Form</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+    </video>
+    <h1 class="title"></h1>
+    <form id="form">
+        <fieldset id="personal-information">
+            <div class="fildset-wrapper-info">
+                <label for="name">Name <span class="green">*</span></label>
+                <input id="name" class="text-input" type="text" required placeholder="Name"
+                    pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" autofocus
+                    title="This field should not be left blank." />
+                <label for="email">Email <span class="green">*</span></label>
+                <input id="email" class="text-input" type="email" required placeholder="Mail@example.com" />
+                <label for="phone">Phone number <span class="green">*</span></label>
+                <input id="phone" class="text-input" type="text" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
+                    required placeholder="Phone Number" />
+            </div>
+        </fieldset>
+        <fieldset id="address">
+            <div class="fildset-wrapper-address">
+                <legend class="address-title">Address <span class="green">*</span></legend>
+                <input id="address-input" class="text-input" type="text" required placeholder="Address" />
+                <input id="line" class="text-input" type="text" required placeholder="Line" />
+                <input id="city" class="text-input" type="text" required placeholder="City"
+                    pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" />
+                <input id="zip-code" class="text-input" type="number" required placeholder="Zip Code" min="0" />
+            </div>
+        </fieldset>
+        <fieldset id="best-time-to-call">
+            <div id="best-time-to-call-wrapper">
+                <legend>Best time to call you <span class="green">*</span></legend>
+                <ul>
+                    <li>
+                        <input id="morning" type="radio" name="time" value="morning" required />
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                        <label for="morning" class="small-text">Morning</label>
+                    </li>
+                    <li>
+                        <input id="afternoon" type="radio" name="time" value="afternoon" />
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                        <label for="afternoon" class="small-text">Afternoon</label>
+                    </li>
+                    <li>
+                        <input id="evening" type="radio" name="time" value="evening" />
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                        <label for="evening" class="small-text">Evening</label>
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <fieldset id="would-like">
+            <div id="would-like-wrapper">
+                <legend>I Would Like To(Choose One) <span class="green">*</span></legend>
+                <ul>
+                    <li>
+                        <input id="appointment" type="radio" name="would-like" value="morning" required />
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                        <label for="appointment" class="small-text">Do your own research</label>
+                    </li>
+                    <li>
+                        <input id="checkup" type="radio" name="would-like" value="afternoon" />
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                        <label for="checkup" class="small-text">Talk to someone from a different cultural background</label>
+                    </li>
+                    <li>
+                        <input id="exam" type="radio" name="would-like" value="evening" />
+                        <div class="check">
+                            <div class="inside"></div>
+                        </div>
+                        <label for="exam" class="small-text">Travel</label>
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
+        <input id="submit" class="small-text" type="submit" />
+    </form>
+</body>
+
+</html>
